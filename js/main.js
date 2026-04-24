@@ -22,7 +22,7 @@ function initReveal() {
 }
 
 function initCountdown() {
-  const target = new Date('2025-09-01T00:00:00Z');
+  const target = new Date('2026-09-01T00:00:00Z'); // estimated — verify at nasa.gov
   const el = document.getElementById('countdown-value');
   const labelEl = document.getElementById('countdown-label');
   if (!el) return;
@@ -32,8 +32,8 @@ function initCountdown() {
     const diff = target - now;
 
     if (diff <= 0) {
-      el.textContent = 'LAUNCHED';
-      if (labelEl) labelEl.textContent = 'ARTEMIS II — MISSION ACTIVE';
+      el.textContent = 'DATE TBD';
+      if (labelEl) labelEl.textContent = 'ARTEMIS II — VERIFY STATUS AT NASA.GOV';
       return;
     }
 

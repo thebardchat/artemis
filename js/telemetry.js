@@ -1,7 +1,7 @@
 /* telemetry.js — live ticker strip */
 (function () {
   const A1_SPLASHDOWN = new Date('2022-12-11T17:40:00Z');
-  const A2_TARGET     = new Date('2025-09-01T00:00:00Z');
+  const A2_TARGET     = new Date('2026-09-01T00:00:00Z'); // estimated — verify at nasa.gov
 
   function daysSince(d) {
     return Math.floor((Date.now() - d) / 86400000);
@@ -13,7 +13,7 @@
 
   const STATIC_ITEMS = [
     () => `<span class="ok">ARTEMIS I</span><span class="sep">//</span>MISSION COMPLETE — ${daysSince(A1_SPLASHDOWN)} DAYS AGO`,
-    () => `<span class="hi">ARTEMIS II</span><span class="sep">//</span>CREWED LUNAR FLYBY — T-${daysUntil(A2_TARGET)}D — CREW ASSIGNED`,
+    () => { const d = daysUntil(A2_TARGET); return `<span class="hi">ARTEMIS II</span><span class="sep">//</span>CREWED LUNAR FLYBY — ${d > 0 ? `T-${d}D` : 'DATE TBD'} — VERIFY NASA.GOV`; },
     () => `<span>SLS CORE STAGE</span><span class="sep">//</span>4× RS-25 <span class="hi">@ 512,000 LBF</span> VACUUM EACH`,
     () => `<span>ORION MPCV</span><span class="sep">//</span>CREW CAPACITY: 4 <span class="sep">·</span> ENDURANCE: <span class="hi">21 DAYS</span>`,
     () => `<span>MSFC HUNTSVILLE AL</span><span class="sep">//</span>HOME OF SATURN V <span class="sep">·</span> HOME OF SLS`,
