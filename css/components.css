@@ -1,0 +1,661 @@
+/* ============================================================
+   COMPONENTS — Diagrams, timeline, telemetry, cards, tribute
+   ============================================================ */
+
+/* ---- NAV ---- */
+#site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px clamp(20px, 5vw, 80px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(10,14,26,0.95), transparent);
+  backdrop-filter: blur(2px);
+}
+
+.nav-logo {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--bone);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--bone-dim);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--bone); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+}
+
+/* ---- HERO ---- */
+#hero {
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: clamp(60px, 10vw, 120px);
+  overflow: hidden;
+  border-top: none;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-color: #05080f;
+  overflow: hidden;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.55;
+}
+
+.hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--navy) 0%,
+    rgba(10,14,26,0.7) 40%,
+    rgba(10,14,26,0.2) 80%,
+    transparent 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.mission-patch-circle {
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(252,61,33,0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  background: rgba(252,61,33,0.08);
+}
+
+.mission-patch-circle svg {
+  width: 40px;
+  height: 40px;
+}
+
+.hero-tagline {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 40px;
+}
+
+.hero-countdown {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  border: var(--rule-strong);
+  padding: 16px 24px;
+  background: rgba(10,14,26,0.7);
+  backdrop-filter: blur(8px);
+}
+
+.countdown-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+}
+
+.countdown-value {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  color: var(--amber);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* ---- PROGRAM SECTION ---- */
+.program-intro p {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  color: var(--bone-dim);
+}
+
+.program-intro p strong {
+  color: var(--bone);
+}
+
+/* Mission status pills */
+.mission-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+.mission-status.complete { background: rgba(0,192,127,0.15); color: var(--green); border: 1px solid rgba(0,192,127,0.3); }
+.mission-status.upcoming { background: rgba(255,176,0,0.15); color: var(--amber); border: 1px solid rgba(255,176,0,0.3); }
+.mission-status.planned  { background: rgba(244,237,228,0.05); color: var(--bone-dim); border: 1px solid rgba(244,237,228,0.15); }
+
+.status-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.complete .status-dot { background: var(--green); }
+.upcoming .status-dot { background: var(--amber); animation: blink 1.5s infinite; }
+.planned  .status-dot { background: var(--bone-dim); }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ---- SLS CUTAWAY ---- */
+#sls-architecture {
+  padding-bottom: 0;
+}
+
+.sls-sticky-wrap {
+  position: relative;
+  height: 600vh;
+}
+
+.sls-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  align-items: center;
+  padding-inline: clamp(20px, 5vw, 80px);
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .sls-sticky {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 20px;
+    padding-top: 80px;
+  }
+}
+
+.sls-canvas-wrap {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sls-canvas {
+  height: 100%;
+  width: auto;
+  max-height: 680px;
+}
+
+.sls-info-panel {
+  padding: 40px 0;
+}
+
+.sls-section-counter {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sls-stage-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.sls-contractor {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--amber);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.sls-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: var(--rule);
+}
+
+.spec-key {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  align-self: center;
+}
+
+.spec-val {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--bone);
+}
+
+.msfc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--red);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-top: 16px;
+}
+
+/* ---- ORION DIAGRAM ---- */
+.orion-diagram {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.orion-diagram svg {
+  width: 100%;
+  height: auto;
+}
+
+/* ---- NRHO ORBIT ---- */
+#nrho-canvas {
+  width: 100%;
+  height: 400px;
+  display: block;
+  border: var(--rule);
+}
+
+/* ---- CREW CARDS ---- */
+.crew-card {
+  padding: 28px;
+  border: var(--rule);
+  background: rgba(244,237,228,0.03);
+  transition: background 0.3s;
+}
+
+.crew-card:hover {
+  background: rgba(244,237,228,0.06);
+}
+
+.crew-role {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+
+.crew-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.crew-agency {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--bone-dim);
+  margin-bottom: 16px;
+}
+
+.crew-bio {
+  font-size: 0.9rem;
+  color: var(--bone-dim);
+  line-height: 1.6;
+}
+
+/* ---- SCOTT TRIBUTE ---- */
+.tribute-block {
+  max-width: 760px;
+  padding: 40px;
+  border-left: 3px solid var(--red);
+  background: rgba(252,61,33,0.04);
+  margin-block: 48px;
+}
+
+.tribute-block h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  margin-bottom: 24px;
+  color: var(--bone);
+}
+
+.tribute-block blockquote {
+  font-style: normal;
+}
+
+.tribute-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--bone-dim);
+  margin-bottom: 1.2em;
+  max-width: 64ch;
+}
+
+.tribute-block p:last-child { margin-bottom: 0; }
+
+.tribute-block em { color: var(--bone); font-style: italic; }
+
+/* ---- TIMELINE ---- */
+.timeline-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bone-faint) transparent;
+  padding-bottom: 24px;
+}
+
+.timeline-track {
+  display: flex;
+  gap: 0;
+  min-width: max-content;
+  position: relative;
+  padding-block: 40px;
+}
+
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: var(--bone-faint);
+  transform: translateY(-50%);
+}
+
+.timeline-card {
+  width: 240px;
+  flex-shrink: 0;
+  padding: 24px;
+  background: var(--navy-mid);
+  border: var(--rule);
+  margin-right: 2px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.timeline-card:hover { background: var(--navy-light); }
+
+.timeline-node {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: 24px;
+  border: 2px solid var(--navy);
+}
+
+.timeline-card.complete .timeline-node  { background: var(--green); }
+.timeline-card.upcoming .timeline-node  { background: var(--amber); }
+.timeline-card.planned  .timeline-node  { background: rgba(244,237,228,0.2); border-color: rgba(244,237,228,0.3); }
+
+.timeline-mission {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+
+.timeline-desc {
+  font-size: 0.8rem;
+  color: var(--bone-dim);
+  line-height: 1.5;
+}
+
+/* ---- TELEMETRY TICKER ---- */
+#telemetry-strip {
+  position: fixed;
+  bottom: 0;
+  left: 0; right: 0;
+  z-index: 50;
+  background: rgba(10,14,26,0.95);
+  border-top: var(--rule-strong);
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.ticker-inner {
+  display: flex;
+  animation: ticker-scroll 40s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-inner:hover { animation-play-state: paused; }
+
+.ticker-item {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  padding-inline: 40px;
+  flex-shrink: 0;
+}
+
+.ticker-item .hi { color: var(--amber); }
+.ticker-item .ok { color: var(--green); }
+.ticker-item .sep { color: var(--red); margin-inline: 4px; }
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---- PLACEHOLDER IMAGES ---- */
+.img-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--navy-light);
+  border: var(--rule);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.img-placeholder .ph-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+}
+
+/* ---- MSFC MAP PIN ---- */
+.map-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .map-section { grid-template-columns: 1fr; }
+}
+
+.map-svg-wrap {
+  position: relative;
+  border: var(--rule);
+  overflow: hidden;
+}
+
+/* ---- HLS COMPARISON ---- */
+.scale-comparison {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.scale-vehicle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scale-vehicle .vehicle-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  text-align: center;
+}
+
+.scale-vehicle .vehicle-height {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--amber);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  padding: 64px clamp(20px, 5vw, 80px);
+  border-top: var(--rule-strong);
+  background: rgba(5,8,15,0.5);
+  position: relative;
+  z-index: 1;
+  padding-bottom: 80px; /* clear telemetry bar */
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: var(--bone-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--bone); }
+
+.footer-credit {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: rgba(244,237,228,0.3);
+  letter-spacing: 0.1em;
+  line-height: 2;
+  border-top: var(--rule);
+  padding-top: 24px;
+}
+
+.ecosystem-link {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--amber);
+  text-decoration: none;
+}
+
+.ecosystem-link:hover { color: var(--bone); }

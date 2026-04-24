@@ -1,0 +1,73 @@
+[
+  {
+    "id": "artemis-1",
+    "name": "Artemis I",
+    "status": "complete",
+    "date": "2022-11-16",
+    "splashdown": "2022-12-11",
+    "description": "Uncrewed test flight. Orion traveled 268,000 miles from Earth, 40,000 miles beyond the Moon. 25.5 days in flight. Splashdown Dec 11 2022.",
+    "crew": null,
+    "vehicle": "SLS Block 1 + Orion",
+    "destination": "Distant Retrograde Orbit (DRO)"
+  },
+  {
+    "id": "artemis-2",
+    "name": "Artemis II",
+    "status": "upcoming",
+    "date": "2025-09-01",
+    "description": "First crewed Artemis flight. 4-person crew on 10-day cislunar free-return trajectory. Does not land.",
+    "crew": ["Reid Wiseman", "Victor Glover", "Christina Koch", "Jeremy Hansen"],
+    "vehicle": "SLS Block 1 + Orion",
+    "destination": "Lunar Flyby"
+  },
+  {
+    "id": "artemis-3",
+    "name": "Artemis III",
+    "status": "planned",
+    "date": "2026-01-01",
+    "description": "First woman and first person of color on the Moon. SpaceX Starship HLS. South Pole landing region.",
+    "crew": null,
+    "vehicle": "SLS Block 1B + Orion + SpaceX Starship HLS",
+    "destination": "Lunar South Pole"
+  },
+  {
+    "id": "artemis-4",
+    "name": "Artemis IV",
+    "status": "planned",
+    "date": "2028-01-01",
+    "description": "First Gateway docking. Crew delivers HALO module hardware. First SLS Block 1B flight.",
+    "crew": null,
+    "vehicle": "SLS Block 1B + Orion",
+    "destination": "Lunar Gateway (NRHO)"
+  },
+  {
+    "id": "artemis-5",
+    "name": "Artemis V",
+    "status": "planned",
+    "date": "2029-01-01",
+    "description": "Blue Origin National Team HLS debut. Second crewed lunar landing. Gateway fully docked.",
+    "crew": null,
+    "vehicle": "SLS Block 1B + Orion + Blue Origin HLS",
+    "destination": "Lunar South Pole"
+  },
+  {
+    "id": "artemis-6",
+    "name": "Artemis VI",
+    "status": "planned",
+    "date": "2030-01-01",
+    "description": "Extended lunar surface operations. Gateway fully operational. Multi-week surface stay.",
+    "crew": null,
+    "vehicle": "SLS Block 1B + Orion",
+    "destination": "Lunar Gateway + Surface"
+  },
+  {
+    "id": "artemis-7",
+    "name": "Artemis VII",
+    "status": "planned",
+    "date": "2031-01-01",
+    "description": "Sustained presence. Multi-week surface operations. Permanent foothold at the lunar south pole.",
+    "crew": null,
+    "vehicle": "SLS Block 1B + Orion",
+    "destination": "Lunar South Pole — Sustained"
+  }
+]

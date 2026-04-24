@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Reid Wiseman",
+    "role": "Commander",
+    "agency": "NASA",
+    "mission": "Artemis II",
+    "bio": "Commander of Artemis II. Former chief of the NASA Astronaut Office. Flew on ISS Expedition 40/41 (2014). Naval test pilot and fighter pilot veteran.",
+    "img": null
+  },
+  {
+    "name": "Victor Glover",
+    "role": "Pilot",
+    "agency": "NASA",
+    "mission": "Artemis II",
+    "bio": "Pilot. First Black astronaut assigned to a lunar mission. Flew on Crew Dragon Resilience to ISS (2020). Naval aviator with 3,000+ flight hours.",
+    "img": null
+  },
+  {
+    "name": "Christina Koch",
+    "role": "Mission Specialist 1",
+    "agency": "NASA",
+    "mission": "Artemis II",
+    "bio": "First woman assigned to a lunar mission. Record holder for longest single spaceflight by a woman — 328 days on ISS (2019–2020). Electrical engineer.",
+    "img": null
+  },
+  {
+    "name": "Jeremy Hansen",
+    "role": "Mission Specialist 2",
+    "agency": "CSA (Canadian Space Agency)",
+    "mission": "Artemis II",
+    "bio": "First Canadian assigned to a lunar mission. CF-18 fighter pilot. Has not yet flown in space — Artemis II will be his first mission.",
+    "img": null
+  }
+]

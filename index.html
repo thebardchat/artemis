@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artemis program technical showcase — built in Huntsville, AL, for the engineers who made it possible. A tribute to Scott Lukens, NASA Marshall Space Flight Center.">
+  <meta name="theme-color" content="#0A0E1A">
+  <title>ARTEMIS — We Are Going</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ARTEMIS — We Are Going">
+  <meta property="og:description" content="A technical tribute to NASA's Artemis program. Built in Huntsville, AL.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thebardchat.github.io/artemis/">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<!-- ============================================================ NAV -->
+<nav id="site-nav" aria-label="Main navigation">
+  <a class="nav-logo" href="#hero">ARTEMIS / MSFC</a>
+  <ul class="nav-links">
+    <li><a href="#program">Program</a></li>
+    <li><a href="#sls-architecture">SLS</a></li>
+    <li><a href="#orion">Orion</a></li>
+    <li><a href="#gateway">Gateway</a></li>
+    <li><a href="#hls">HLS</a></li>
+    <li><a href="#msfc">MSFC</a></li>
+    <li><a href="#people">People</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================ HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <img
+      src="img/hero/artemis1-launch.jpg"
+      alt="Artemis I SLS rocket launching from Pad 39B at Kennedy Space Center, November 16 2022"
+      onerror="this.style.display='none'"
+      loading="eager"
+      fetchpriority="high"
+    >
+    <div class="hero-bg-gradient"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="mission-patch-circle">
+      <!-- Artemis arc symbol SVG -->
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" stroke="#FC3D21" stroke-width="1.5" fill="none"/>
+        <path d="M8 28 Q20 8 32 28" stroke="#F4EDE4" stroke-width="1.5" fill="none"/>
+        <circle cx="20" cy="10" r="3" fill="#FFB000"/>
+      </svg>
+    </div>
+
+    <h1 class="hero-tagline reveal">
+      We are<br>
+      <em>going.</em>
+    </h1>
+
+    <p class="hero-sub reveal" data-delay="1">Built in Huntsville. Bound for the Moon.</p>
+
+    <div class="hero-countdown reveal" data-delay="2">
+      <span class="countdown-label" id="countdown-label">Artemis II · Crewed Lunar Flyby</span>
+      <span class="countdown-value" id="countdown-value">T-000D 00:00:00</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ THE PROGRAM -->
+<section id="program">
+  <div class="container">
+    <span class="section-label">01 / The Program</span>
+    <div class="editorial-grid">
+      <div>
+        <h2 class="reveal">Artemis</h2>
+        <div class="program-intro reveal" data-delay="1">
+          <p>
+            <strong>Artemis I</strong> launched November 16, 2022 — the most powerful rocket ever flown, arcing into the night sky above Pad 39B at Kennedy Space Center. The uncrewed Orion capsule traveled 268,000 miles from Earth, swung 40,000 miles beyond the Moon, and splashed down in the Pacific on December 11. Twenty-five days in deep space. The first human-rated capsule to reach lunar distance since Apollo 17, fifty years before.
+            <span class="mission-status complete" style="margin-left:8px"><span class="status-dot"></span>Complete</span>
+          </p>
+          <p>
+            <strong>Artemis II</strong> will carry four astronauts — Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen — on a ten-day free-return trajectory around the Moon. The first human beings to reach lunar distance since 1972. No landing. A proving flight for a crew that will go further.
+            <span class="mission-status upcoming" style="margin-left:8px"><span class="status-dot"></span>Upcoming</span>
+          </p>
+          <p>
+            <strong>Artemis III</strong> will land. At the lunar south pole — a region of permanent shadow, ancient ice, and possibility — the first woman and the first person of color will step onto the Moon. Aboard a SpaceX Starship Human Landing System, they will stay longer than any Apollo crew. This time, we mean to stay.
+            <span class="mission-status planned" style="margin-left:8px"><span class="status-dot"></span>Planned</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="reveal" data-delay="2">
+        <div class="stat-block">
+          <div class="stat-item">
+            <span class="stat-value">322<span style="font-size:0.5em">ft</span></span>
+            <span class="stat-label">SLS Total Height</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">8.8M<span style="font-size:0.5em">lbf</span></span>
+            <span class="stat-label">Liftoff Thrust</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">4</span>
+            <span class="stat-label">Artemis II Crew</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">21<span style="font-size:0.5em">days</span></span>
+            <span class="stat-label">Orion Endurance</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">268K<span style="font-size:0.5em">mi</span></span>
+            <span class="stat-label">A-I Max Distance</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">50<span style="font-size:0.5em">yrs</span></span>
+            <span class="stat-label">Since Apollo 17</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-pagination">
+      <span class="mono">ARTEMIS PROGRAM / NASA</span>
+      <span class="mono">01</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SLS ARCHITECTURE -->
+<section id="sls-architecture">
+  <div class="container" style="padding-bottom: var(--section-pad)">
+    <span class="section-label">02 / Space Launch System</span>
+    <h2 class="reveal">SLS Architecture</h2>
+    <p class="reveal" data-delay="1" style="color:var(--bone-dim);margin-bottom:0">
+      Scroll to assemble the rocket. The most powerful launch vehicle ever built.
+    </p>
+  </div>
+
+  <div class="sls-sticky-wrap">
+    <div class="sls-sticky">
+      <div class="sls-canvas-wrap">
+        <canvas id="sls-canvas" aria-label="SLS rocket stack diagram"></canvas>
+      </div>
+      <div class="sls-info-panel">
+        <div class="sls-section-counter">Stage 1 of 6</div>
+        <div class="sls-stage-name">RS-25 Engines</div>
+        <div class="sls-contractor">Aerojet Rocketdyne · Canoga Park, CA</div>
+        <div class="sls-specs">
+          <div class="spec-row">
+            <span class="spec-key">Thrust</span>
+            <span class="spec-val">418,000 lbf each</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Propellant</span>
+            <span class="spec-val">LH₂ / LOX</span>
+          </div>
+        </div>
+        <div class="msfc-badge">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <polygon points="7,1 13,12 1,12" stroke="#FC3D21" stroke-width="1.5" fill="none"/>
+          </svg>
+          Marshall Space Flight Center — Huntsville, AL
+        </div>
+        <p style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(244,237,228,0.3);margin-top:24px;letter-spacing:0.1em">
+          PRIMARY CONTRACTOR: CORE STAGE SYSTEMS ENGINEERING<br>
+          PROPULSION · STRUCTURES · CRYOGENIC SYSTEMS
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:var(--section-pad)">
+    <div class="section-pagination">
+      <span class="mono">SPACE LAUNCH SYSTEM / NASA / BOEING / NORTHROP GRUMMAN</span>
+      <span class="mono">02</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ ORION -->
+<section id="orion">
+  <div class="container">
+    <span class="section-label">03 / Orion Spacecraft</span>
+    <div class="editorial-grid">
+      <div>
+        <h2 class="reveal">Orion</h2>
+        <div class="program-intro reveal" data-delay="1">
+          <p>
+            Built by <strong>Lockheed Martin</strong>, the Orion Multi-Purpose Crew Vehicle is the most capable deep-space human spacecraft ever constructed. Its European Service Module — contributed by the <strong>European Space Agency (ESA)</strong> — provides propulsion, power, thermal control, and consumables.
+          </p>
+          <p>
+            Orion carries up to four crew members for missions lasting up to 21 days in deep space. Its 5-meter heat shield — the largest ever flown — protected the capsule through 5,000°F reentry temperatures returning from lunar distance at Artemis I.
+          </p>
+          <p>
+            Where Apollo was a sprint, Orion is built for a sustained presence. The data from Artemis I's uncrewed return validated every thermal protection system assumption. The next crew to fly it will go farther than any human has gone since 1972.
+          </p>
+        </div>
+        <div class="stat-block reveal" data-delay="2">
+          <div class="stat-item">
+            <span class="stat-value">4</span>
+            <span class="stat-label">Crew Capacity</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">21<span style="font-size:0.5em">days</span></span>
+            <span class="stat-label">Deep Space Endurance</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">5m</span>
+            <span class="stat-label">Heat Shield Diameter</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">5,000°F</span>
+            <span class="stat-label">Reentry Temperature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" data-delay="2">
+        <!-- Orion diagram SVG -->
+        <svg viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Orion spacecraft diagram">
+          <!-- ESM -->
+          <rect x="90" y="250" width="120" height="100" fill="#1a3468" stroke="rgba(244,237,228,0.2)" stroke-width="1"/>
+          <text x="150" y="285" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(244,237,228,0.5)">EUROPEAN</text>
+          <text x="150" y="296" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(244,237,228,0.5)">SERVICE MODULE</text>
+          <text x="150" y="307" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(255,176,0,0.7)">ESA / Airbus</text>
+          <!-- Solar arrays -->
+          <rect x="10" y="270" width="70" height="16" fill="rgba(26,52,104,0.7)" stroke="rgba(244,237,228,0.15)" stroke-width="1"/>
+          <rect x="220" y="270" width="70" height="16" fill="rgba(26,52,104,0.7)" stroke="rgba(244,237,228,0.15)" stroke-width="1"/>
+          <text x="45" y="265" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="rgba(244,237,228,0.3)">SOLAR ARRAY</text>
+          <text x="255" y="265" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="rgba(244,237,228,0.3)">SOLAR ARRAY</text>
+          <!-- Crew module -->
+          <path d="M80 250 L80 150 Q80 80 150 70 Q220 80 220 150 L220 250 Z" fill="#2a3f6e" stroke="rgba(244,237,228,0.2)" stroke-width="1"/>
+          <text x="150" y="175" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(244,237,228,0.5)">CREW MODULE</text>
+          <text x="150" y="188" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(255,176,0,0.7)">Lockheed Martin</text>
+          <text x="150" y="201" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="rgba(244,237,228,0.35)">4 crew / 21 days</text>
+          <!-- Heat shield -->
+          <ellipse cx="150" cy="250" rx="70" ry="12" fill="#FC3D21" opacity="0.6"/>
+          <text x="150" y="254" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="white" opacity="0.8">HEAT SHIELD 5m</text>
+          <!-- LAS tower -->
+          <rect x="145" y="10" width="10" height="60" fill="#8a9bb0"/>
+          <polygon points="140,10 160,10 150,0" fill="#FC3D21"/>
+          <text x="165" y="25" font-family="'JetBrains Mono', monospace" font-size="8" fill="rgba(244,237,228,0.4)">LAS TOWER</text>
+          <!-- Windows -->
+          <ellipse cx="130" cy="145" rx="12" ry="8" fill="rgba(100,180,255,0.2)" stroke="rgba(244,237,228,0.3)" stroke-width="1"/>
+          <ellipse cx="170" cy="145" rx="12" ry="8" fill="rgba(100,180,255,0.2)" stroke="rgba(244,237,228,0.3)" stroke-width="1"/>
+          <!-- Labels -->
+          <line x1="82" y1="175" x2="20" y2="175" stroke="rgba(244,237,228,0.2)" stroke-width="0.5"/>
+          <text x="18" y="172" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="7" fill="rgba(244,237,228,0.3)">WINDOWS ×2</text>
+          <line x1="220" y1="210" x2="282" y2="210" stroke="rgba(244,237,228,0.2)" stroke-width="0.5"/>
+          <text x="284" y="213" font-family="'JetBrains Mono', monospace" font-size="7" fill="rgba(244,237,228,0.3)">DOCKING PORT</text>
+          <text x="150" y="395" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="rgba(244,237,228,0.25)">ORION MPCV / NOT TO SCALE</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="section-pagination">
+      <span class="mono">ORION MPCV / LOCKHEED MARTIN / ESA</span>
+      <span class="mono">03</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ GATEWAY -->
+<section id="gateway">
+  <div class="container">
+    <span class="section-label">04 / Lunar Gateway</span>
+    <div class="editorial-grid">
+      <div>
+        <h2 class="reveal">Lunar Gateway</h2>
+        <div class="program-intro reveal" data-delay="1">
+          <p>
+            The <strong>Lunar Gateway</strong> is humanity's first space station in lunar orbit — a waystation between Earth and the Moon's surface. Unlike the ISS, which orbits at 250 miles above Earth, Gateway will orbit the Moon in a Near-Rectilinear Halo Orbit (NRHO), dipping as low as 1,900 km above the lunar south pole at periapsis.
+          </p>
+          <p>
+            The first two components: the <strong>Power and Propulsion Element (PPE)</strong> built by Maxar Technologies, providing solar electric propulsion; and the <strong>Habitation and Logistics Outpost (HALO)</strong> built by Northrop Grumman, providing crew quarters, life support, and communication systems.
+          </p>
+          <p>
+            Subsequent missions will add modules from <strong>ESA</strong> (ESPRIT refueling module), <strong>JAXA</strong> (habitation), and <strong>CSA</strong> (Canadarm3). Gateway is international infrastructure — built to outlast any single mission and serve as the command post for sustained lunar exploration.
+          </p>
+        </div>
+      </div>
+      <div class="reveal" data-delay="2">
+        <canvas id="nrho-canvas" aria-label="Near-Rectilinear Halo Orbit animation around the Moon"></canvas>
+        <p style="font-family:var(--font-mono);font-size:0.62rem;color:rgba(244,237,228,0.3);margin-top:8px;letter-spacing:0.1em">
+          NRHO / PERIOD: ~6.5 DAYS / PERIAPSIS: ~1,900 KM / APOAPSIS: ~70,000 KM
+        </p>
+      </div>
+    </div>
+
+    <div class="stat-block reveal" data-delay="3">
+      <div class="stat-item">
+        <span class="stat-value">PPE</span>
+        <span class="stat-label">Maxar Technologies</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">HALO</span>
+        <span class="stat-label">Northrop Grumman</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">ESPRIT</span>
+        <span class="stat-label">ESA / Thales</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">4</span>
+        <span class="stat-label">Partner Agencies</span>
+      </div>
+    </div>
+
+    <div class="section-pagination">
+      <span class="mono">LUNAR GATEWAY / NASA / ESA / JAXA / CSA</span>
+      <span class="mono">04</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ HLS -->
+<section id="hls">
+  <div class="container">
+    <span class="section-label">05 / Human Landing System</span>
+    <h2 class="reveal">Starship HLS</h2>
+    <p class="program-intro reveal" data-delay="1" style="color:var(--bone-dim);max-width:64ch;margin-bottom:48px">
+      For Artemis III, NASA selected <strong>SpaceX Starship</strong> as the Human Landing System. At 165 feet tall, it dwarfs the Apollo Lunar Module. Starship HLS will launch from Earth separately, await the crew in lunar orbit, descend to the south pole surface, and return the crew to Orion for the journey home.
+    </p>
+
+    <!-- Scale comparison SVG -->
+    <div class="scale-comparison reveal" data-delay="2">
+      <!-- Apollo LM -->
+      <div class="scale-vehicle">
+        <svg viewBox="0 0 100 220" width="60" aria-label="Apollo Lunar Module scale reference">
+          <!-- LM descent stage -->
+          <polygon points="20,200 80,200 90,160 10,160" fill="#8a9bb0" stroke="rgba(244,237,228,0.3)" stroke-width="1"/>
+          <!-- LM ascent stage -->
+          <rect x="30" y="110" width="40" height="50" fill="#9aabb0" stroke="rgba(244,237,228,0.3)" stroke-width="1"/>
+          <polygon points="30,110 70,110 65,90 35,90" fill="#a0acb8"/>
+          <circle cx="50" cy="100" r="8" fill="#7a95a0" stroke="rgba(244,237,228,0.3)" stroke-width="1"/>
+          <!-- legs -->
+          <line x1="10" y1="160" x2="5" y2="210" stroke="#8a9bb0" stroke-width="2"/>
+          <line x1="90" y1="160" x2="95" y2="210" stroke="#8a9bb0" stroke-width="2"/>
+          <line x1="5" y1="210" x2="20" y2="200" stroke="#8a9bb0" stroke-width="1"/>
+          <line x1="95" y1="210" x2="80" y2="200" stroke="#8a9bb0" stroke-width="1"/>
+        </svg>
+        <span class="vehicle-height">23 ft</span>
+        <span class="vehicle-label">Apollo<br>Lunar Module</span>
+      </div>
+
+      <!-- Scale line -->
+      <div style="width:1px;height:200px;background:rgba(244,237,228,0.15);align-self:flex-end;flex-shrink:0"></div>
+
+      <!-- Starship HLS (165 ft = ~7.17× LM, show proportionally) -->
+      <div class="scale-vehicle">
+        <svg viewBox="0 0 120 660" width="80" aria-label="SpaceX Starship HLS scale reference">
+          <!-- Body -->
+          <rect x="30" y="60" width="60" height="540" fill="#1a2e50" stroke="rgba(244,237,228,0.2)" stroke-width="1"/>
+          <!-- Nose -->
+          <path d="M30 60 Q60 0 90 60" fill="#243866"/>
+          <!-- Fins (bottom) -->
+          <polygon points="30,550 0,640 30,590" fill="#1a2e50" stroke="rgba(244,237,228,0.2)" stroke-width="1"/>
+          <polygon points="90,550 120,640 90,590" fill="#1a2e50" stroke="rgba(244,237,228,0.2)" stroke-width="1"/>
+          <!-- Flaps (top) -->
+          <polygon points="30,150 0,100 30,200" fill="#243866" stroke="rgba(244,237,228,0.15)" stroke-width="1"/>
+          <polygon points="90,150 120,100 90,200" fill="#243866" stroke="rgba(244,237,228,0.15)" stroke-width="1"/>
+          <!-- Crew module area -->
+          <rect x="32" y="62" width="56" height="80" fill="rgba(42,63,110,0.5)"/>
+          <text x="60" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="rgba(244,237,228,0.4)">CREW</text>
+          <text x="60" y="105" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="rgba(244,237,228,0.4)">MODULE</text>
+          <!-- Engines -->
+          <rect x="35" y="590" width="10" height="20" fill="#6a8090" rx="2"/>
+          <rect x="55" y="590" width="10" height="20" fill="#6a8090" rx="2"/>
+          <rect x="75" y="590" width="10" height="20" fill="#6a8090" rx="2"/>
+          <!-- SpaceX text -->
+          <text x="60" y="380" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="rgba(244,237,228,0.2)" transform="rotate(-90 60 380)">SPACEX</text>
+        </svg>
+        <span class="vehicle-height">165 ft</span>
+        <span class="vehicle-label">SpaceX Starship<br>HLS</span>
+      </div>
+    </div>
+
+    <p style="font-family:var(--font-mono);font-size:0.62rem;color:rgba(244,237,228,0.3);margin-top:8px;letter-spacing:0.08em;text-align:center">
+      SCALE COMPARISON — STARSHIP HLS IS 7× TALLER THAN THE APOLLO LM ·
+      NASA-SELECTED HLS PROVIDER FOR ARTEMIS III · IMAGE SOURCE: NASA / SPACEX (PUBLIC DOMAIN)
+    </p>
+
+    <div class="section-pagination" style="margin-top:48px">
+      <span class="mono">HUMAN LANDING SYSTEM / SPACEX STARSHIP / NASA CONTRACT</span>
+      <span class="mono">05</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ MSFC -->
+<section id="msfc">
+  <div class="container">
+    <span class="section-label">06 / Marshall Space Flight Center</span>
+    <div class="map-section">
+      <div>
+        <h2 class="reveal">Huntsville, Alabama</h2>
+        <div class="program-intro reveal" data-delay="1">
+          <p>
+            <strong>Marshall Space Flight Center</strong> is where America's rocket program lives. On the grounds of Redstone Arsenal in Huntsville, Alabama, MSFC has been the home of human space propulsion since Wernher von Braun moved his team here in 1950. They built the Saturn V. They managed the Space Shuttle Main Engines. And they are building SLS.
+          </p>
+          <p>
+            MSFC owns the core stage systems engineering for SLS — the engineering authority on propulsion, structures, and cryogenic systems for the most powerful rocket ever launched. Every weld in that core stage, every test at Stennis Space Center, every RS-25 certification flight runs through Huntsville.
+          </p>
+          <p>
+            This is not a supporting role. Marshall is the reason this rocket exists.
+          </p>
+        </div>
+        <div class="stat-block reveal" data-delay="2">
+          <div class="stat-item">
+            <span class="stat-value">1960</span>
+            <span class="stat-label">MSFC Founded</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Saturn V</span>
+            <span class="stat-label">Previous Work</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Core Stage</span>
+            <span class="stat-label">SLS Primary Role</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" data-delay="2">
+        <!-- Alabama state SVG with Huntsville pin -->
+        <div class="map-svg-wrap" style="padding:24px;background:rgba(244,237,228,0.02)">
+          <svg viewBox="0 0 300 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Map of Alabama with Huntsville marked">
+            <!-- Rough Alabama outline -->
+            <path d="M60 10 L240 10 L245 30 L250 60 L255 90 L258 140 L260 200 L262 260 L260 310
+                     L255 330 L210 340 L190 380 L160 380 L150 360 L140 355 L100 355 L90 350
+                     L60 300 L55 280 L50 240 L48 200 L46 160 L50 120 L55 80 L58 40 Z"
+                  fill="rgba(26,52,104,0.3)" stroke="rgba(244,237,228,0.2)" stroke-width="1.5"/>
+            <!-- Huntsville pin — north-center of state -->
+            <circle cx="152" cy="55" r="8" fill="#FC3D21"/>
+            <circle cx="152" cy="55" r="14" stroke="#FC3D21" stroke-width="1" fill="none" opacity="0.5"/>
+            <circle cx="152" cy="55" r="20" stroke="#FC3D21" stroke-width="0.5" fill="none" opacity="0.3">
+              <animate attributeName="r" from="8" to="28" dur="2s" repeatCount="indefinite" begin="0s"/>
+              <animate attributeName="opacity" from="0.4" to="0" dur="2s" repeatCount="indefinite" begin="0s"/>
+            </circle>
+            <line x1="152" y1="55" x2="152" y2="20" stroke="#FC3D21" stroke-width="1.5"/>
+            <polygon points="145,20 159,20 152,10" fill="#FC3D21"/>
+            <!-- Labels -->
+            <text x="170" y="50" font-family="'JetBrains Mono', monospace" font-size="10" fill="#FC3D21" font-weight="700">HUNTSVILLE</text>
+            <text x="170" y="63" font-family="'JetBrains Mono', monospace" font-size="8" fill="rgba(252,61,33,0.7)">MSFC</text>
+            <text x="152" y="215" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" fill="rgba(244,237,228,0.3)" font-weight="400">ALABAMA</text>
+            <!-- NASA insignia location marker -->
+            <text x="152" y="240" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="rgba(244,237,228,0.2)">34.6461° N, 86.6550° W</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-pagination">
+      <span class="mono">MARSHALL SPACE FLIGHT CENTER / HUNTSVILLE, AL / EST. 1960</span>
+      <span class="mono">06</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ THE PEOPLE -->
+<section id="people">
+  <div class="container">
+    <span class="section-label">07 / The People</span>
+    <h2 class="reveal">The People Who Built This</h2>
+
+    <!-- SCOTT LUKENS TRIBUTE -->
+    <!-- EDIT-ME: Scott -->
+    <div class="tribute-block reveal" data-delay="1">
+      <h3>Scott Lukens — NASA Engineer, Marshall Space Flight Center</h3>
+      <blockquote>
+        <p>Scott worked on Artemis from the very beginning. Before the mission patch had a name, before the SLS stack had a final configuration, before the first weld on the core stage — he was there. Long hours in Huntsville on a rocket that would put humanity back on the Moon for the first time in half a century.</p>
+        <p>A stepfather. A quiet engineer. Part of the generation that said <em>we will go back, and this time we will stay.</em></p>
+        <p>This page exists because he showed his family what it looks like to build something that matters. Every diagram on this site, every rivet in that rocket, has thousands of people like Scott behind it. This one's for him.</p>
+      </blockquote>
+    </div>
+
+    <!-- ARTEMIS II CREW -->
+    <h3 class="reveal" data-delay="2" style="margin-top:64px;margin-bottom:32px">Artemis II Crew</h3>
+    <div class="card-grid" id="crew-cards">
+      <!-- Populated by JS or static fallback below -->
+      <div class="crew-card reveal" data-delay="2">
+        <div class="crew-role">Commander</div>
+        <div class="crew-name">Reid Wiseman</div>
+        <div class="crew-agency">NASA</div>
+        <p class="crew-bio">Former chief of the NASA Astronaut Office. Flew on ISS Expedition 40/41 (2014). Naval test pilot and fighter pilot veteran.</p>
+      </div>
+      <div class="crew-card reveal" data-delay="3">
+        <div class="crew-role">Pilot</div>
+        <div class="crew-name">Victor Glover</div>
+        <div class="crew-agency">NASA</div>
+        <p class="crew-bio">First Black astronaut assigned to a lunar mission. Flew on Crew Dragon Resilience to ISS (2020). Naval aviator with 3,000+ flight hours.</p>
+      </div>
+      <div class="crew-card reveal" data-delay="4">
+        <div class="crew-role">Mission Specialist 1</div>
+        <div class="crew-name">Christina Koch</div>
+        <div class="crew-agency">NASA</div>
+        <p class="crew-bio">First woman assigned to a lunar mission. Record holder for longest single spaceflight by a woman — 328 days on ISS (2019–2020).</p>
+      </div>
+      <div class="crew-card reveal" data-delay="5">
+        <div class="crew-role">Mission Specialist 2</div>
+        <div class="crew-name">Jeremy Hansen</div>
+        <div class="crew-agency">CSA (Canadian Space Agency)</div>
+        <p class="crew-bio">First Canadian assigned to a lunar mission. CF-18 fighter pilot. Artemis II will be his first spaceflight.</p>
+      </div>
+    </div>
+
+    <div class="section-pagination">
+      <span class="mono">ARTEMIS II CREW / NASA + CSA / FOUR HUMANS, ONE MOON</span>
+      <span class="mono">07</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ TIMELINE -->
+<section id="timeline">
+  <div class="container">
+    <span class="section-label">08 / Mission Timeline</span>
+    <h2 class="reveal">Artemis I → VII</h2>
+    <p class="reveal" data-delay="1" style="color:var(--bone-dim);margin-bottom:32px">
+      Scroll horizontally. Use arrow keys to navigate.
+    </p>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline-track container" id="timeline-track" role="list" aria-label="Artemis mission timeline">
+      <!-- Populated by timeline.js -->
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-pagination">
+      <span class="mono">ARTEMIS I–VII / 2022–2031 / NASA LUNAR PROGRAM</span>
+      <span class="mono">08</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Artemis Program</h4>
+      <ul class="footer-links">
+        <li><a href="https://www.nasa.gov/specials/artemis/" target="_blank" rel="noopener">NASA Artemis</a></li>
+        <li><a href="https://www.nasa.gov/humans-in-space/moon-to-mars/" target="_blank" rel="noopener">Moon to Mars</a></li>
+        <li><a href="https://www.nasa.gov/marshall/" target="_blank" rel="noopener">Marshall Space Flight Center</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Vehicles</h4>
+      <ul class="footer-links">
+        <li><a href="https://www.nasa.gov/exploration/systems/sls/index.html" target="_blank" rel="noopener">Space Launch System</a></li>
+        <li><a href="https://www.lockheedmartin.com/orion" target="_blank" rel="noopener">Orion (Lockheed Martin)</a></li>
+        <li><a href="https://www.spacex.com/vehicles/starship/" target="_blank" rel="noopener">SpaceX Starship HLS</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ecosystem</h4>
+      <ul class="footer-links">
+        <li><a href="https://thebardchat.github.io" target="_blank" rel="noopener">Shane Brazelton</a></li>
+        <li><a href="https://github.com/thebardchat/BGKPJR-Core-Simulations" target="_blank" rel="noopener" class="ecosystem-link">BGKPJR Simulations →</a></li>
+        <li><a href="https://github.com/thebardchat/artemis" target="_blank" rel="noopener">Source Code</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Credits</h4>
+      <ul class="footer-links">
+        <li><a href="https://images.nasa.gov" target="_blank" rel="noopener">NASA Image Library</a></li>
+        <li><a href="https://www.flickr.com/photos/spacex/" target="_blank" rel="noopener">SpaceX Imagery</a></li>
+        <li><a href="https://claude.ai/referral/4fAMYN9Ing" target="_blank" rel="noopener">Built with Claude</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-credit">
+    <p>All NASA imagery is in the public domain per NASA media guidelines. SpaceX imagery used per open license.<br>
+    Built with love in <strong>Hazel Green, Alabama</strong> · Shane Brazelton + Claude (Anthropic) ·
+    <a href="https://claude.ai/referral/4fAMYN9Ing" target="_blank" rel="noopener" style="color:var(--amber)">Try Claude free →</a>
+    </p>
+    <p style="margin-top:8px">
+      <a href="https://github.com/thebardchat/artemis" target="_blank" rel="noopener">github.com/thebardchat/artemis</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/thebardchat/BGKPJR-Core-Simulations" target="_blank" rel="noopener" class="ecosystem-link">BGKPJR Simulations</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ============================================================ TELEMETRY TICKER -->
+<div id="telemetry-strip" aria-label="Mission telemetry ticker" role="marquee">
+  <div class="ticker-inner">
+    <span class="ticker-item">ARTEMIS <span class="sep">//</span> LOADING TELEMETRY…</span>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script src="js/sls-cutaway.js"></script>
+<script src="js/nrho-orbit.js"></script>
+<script src="js/telemetry.js"></script>
+<script src="js/timeline.js"></script>
+
+</body>
+</html>

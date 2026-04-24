@@ -1,0 +1,89 @@
+{
+  "total_height_ft": 322,
+  "total_thrust_lbs": 8800000,
+  "stages": [
+    {
+      "id": "srbs",
+      "name": "Solid Rocket Boosters",
+      "count": 2,
+      "contractor": "Northrop Grumman",
+      "location": "Promontory, Utah",
+      "thrust_lbs": "3,600,000 each (7.2M total)",
+      "thrust_kn": 15000,
+      "propellant": "APCP solid propellant",
+      "height_ft": 177,
+      "burn_duration_sec": 126,
+      "notes": "5-segment variant of Space Shuttle SRBs. Recovered and refurbished in Shuttle era; expended on SLS.",
+      "msfc_role": "SRB systems management and integration"
+    },
+    {
+      "id": "core-stage",
+      "name": "Core Stage",
+      "count": 1,
+      "contractor": "Boeing",
+      "location": "Michoud Assembly Facility, New Orleans, LA",
+      "thrust_lbs": "1,600,000 (4× RS-25)",
+      "thrust_kn": 7120,
+      "propellant": "Liquid hydrogen (LH₂) / liquid oxygen (LOX)",
+      "height_ft": 212,
+      "propellant_mass_lbs": 1600000,
+      "notes": "Tallest rocket stage ever built. Core of the SLS stack. Primary systems engineering at Marshall Space Flight Center, Huntsville AL.",
+      "msfc_role": "PRIMARY — core stage systems engineering, propulsion, structures, cryogenic systems"
+    },
+    {
+      "id": "rs25",
+      "name": "RS-25 Engines",
+      "count": 4,
+      "contractor": "Aerojet Rocketdyne",
+      "location": "Canoga Park, California",
+      "thrust_lbs": "418,000 each (sea level) / 512,000 each (vacuum)",
+      "thrust_kn": 1859,
+      "propellant": "Liquid hydrogen (LH₂) / liquid oxygen (LOX)",
+      "height_ft": 14,
+      "specific_impulse_sec": 452,
+      "notes": "Heritage Space Shuttle Main Engines with upgraded avionics. Among the most efficient rocket engines ever built. Expended on SLS.",
+      "msfc_role": "Propulsion systems oversight and certification"
+    },
+    {
+      "id": "icps",
+      "name": "Interim Cryogenic Propulsion Stage",
+      "count": 1,
+      "contractor": "United Launch Alliance (ULA)",
+      "location": "Decatur, Alabama",
+      "thrust_lbs": "22,890",
+      "thrust_kn": 101.8,
+      "propellant": "Liquid hydrogen (LH₂) / liquid oxygen (LOX)",
+      "height_ft": 45,
+      "notes": "Modified Delta IV Cryogenic Second Stage. Boosts Orion from low Earth orbit to translunar injection.",
+      "msfc_role": "Upper stage integration and mission design"
+    },
+    {
+      "id": "orion-adapter",
+      "name": "Orion Stage Adapter",
+      "count": 1,
+      "contractor": "Teledyne Brown Engineering",
+      "location": "Huntsville, Alabama",
+      "thrust_lbs": "N/A",
+      "thrust_kn": 0,
+      "propellant": "N/A",
+      "height_ft": 12,
+      "notes": "Structural interface between ICPS and Orion. Carried 13 CubeSat secondary payloads on Artemis I.",
+      "msfc_role": "Payload integration and CubeSat management"
+    },
+    {
+      "id": "orion",
+      "name": "Orion MPCV",
+      "count": 1,
+      "contractor": "Lockheed Martin (crew module) / ESA (European Service Module)",
+      "location": "Kennedy Space Center, FL (final assembly)",
+      "thrust_lbs": "N/A (OMS-E: 6,000 lbs)",
+      "thrust_kn": 26.7,
+      "propellant": "NTO / MMH hypergolic (service module main engine)",
+      "height_ft": 23,
+      "crew_capacity": 4,
+      "endurance_days": 21,
+      "notes": "Multi-Purpose Crew Vehicle. Radiation-hardened avionics. 50% larger crew cabin than Apollo. Heat shield 5m diameter — largest ever flown.",
+      "msfc_role": "Mission operations coordination and payload integration"
+    }
+  ]
+}
