@@ -659,3 +659,98 @@ footer {
 }
 
 .ecosystem-link:hover { color: var(--bone); }
+
+/* ---------------------------------------------------------------- MISSION GALLERY */
+.mission-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+  .mission-gallery { grid-template-columns: 1fr; }
+}
+
+.gallery-card {
+  margin: 0;
+  background: rgba(244,237,228,0.03);
+  border: var(--rule);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+  background: rgba(244,237,228,0.06);
+}
+
+.gallery-card.img-missing img { display: none; }
+
+.gallery-card.img-missing::before {
+  content: 'IMAGE PENDING';
+  display: block;
+  aspect-ratio: 16/10;
+  background: rgba(244,237,228,0.04);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  color: rgba(244,237,228,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-card figcaption {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.gallery-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--green);
+  text-transform: uppercase;
+}
+
+.gallery-date {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: rgba(244,237,228,0.35);
+}
+
+.gallery-card p {
+  font-size: 0.85rem;
+  color: var(--bone-dim);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gallery-source {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: rgba(244,237,228,0.25);
+  margin-bottom: 40px;
+}
+
+/* crew distinction badge */
+.crew-distinction {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}

@@ -22,7 +22,7 @@ function initReveal() {
 }
 
 function initCountdown() {
-  const target = new Date('2026-09-01T00:00:00Z'); // estimated — verify at nasa.gov
+  const target = new Date('2027-07-01T00:00:00Z'); // Artemis III estimated — verify at nasa.gov
   const el = document.getElementById('countdown-value');
   const labelEl = document.getElementById('countdown-label');
   if (!el) return;
@@ -33,7 +33,7 @@ function initCountdown() {
 
     if (diff <= 0) {
       el.textContent = 'DATE TBD';
-      if (labelEl) labelEl.textContent = 'ARTEMIS II — VERIFY STATUS AT NASA.GOV';
+      if (labelEl) labelEl.textContent = 'ARTEMIS III — VERIFY STATUS AT NASA.GOV';
       return;
     }
 

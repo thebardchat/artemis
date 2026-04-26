@@ -13,9 +13,10 @@
   {
     "id": "artemis-2",
     "name": "Artemis II",
-    "status": "upcoming",
-    "date": "2025-09-01",
-    "description": "First crewed Artemis flight. 4-person crew on 10-day cislunar free-return trajectory. Does not land.",
+    "status": "complete",
+    "date": "2026-04-01",
+    "splashdown": "2026-04-10",
+    "description": "First crewed Artemis flight. 9-day cislunar free-return trajectory. Lunar flyby April 6. Distance record: 406,771 km (252,756 mi) — farthest humans have ever traveled. First crewed flight beyond LEO since Apollo 17.",
     "crew": ["Reid Wiseman", "Victor Glover", "Christina Koch", "Jeremy Hansen"],
     "vehicle": "SLS Block 1 + Orion",
     "destination": "Lunar Flyby"
@@ -24,21 +25,21 @@
     "id": "artemis-3",
     "name": "Artemis III",
     "status": "planned",
-    "date": "2026-01-01",
-    "description": "First woman and first person of color on the Moon. SpaceX Starship HLS. South Pole landing region.",
+    "date": "2027-07-01",
+    "description": "Redesigned mission: crewed Earth-orbit HLS docking test. Crew will evaluate SpaceX Starship HLS and Blue Origin Blue Moon, test AxEMU spacesuits in LEO. Not a lunar landing.",
     "crew": null,
-    "vehicle": "SLS Block 1B + Orion + SpaceX Starship HLS",
-    "destination": "Lunar South Pole"
+    "vehicle": "SLS Block 1B + Orion",
+    "destination": "Earth Orbit (HLS Docking Test)"
   },
   {
     "id": "artemis-4",
     "name": "Artemis IV",
     "status": "planned",
     "date": "2028-01-01",
-    "description": "First Gateway docking. Crew delivers HALO module hardware. First SLS Block 1B flight.",
+    "description": "First crewed lunar landing. First woman and first person of color on the Moon. SpaceX Starship HLS. South Pole landing region. First Gateway docking.",
     "crew": null,
-    "vehicle": "SLS Block 1B + Orion",
-    "destination": "Lunar Gateway (NRHO)"
+    "vehicle": "SLS Block 1B + Orion + SpaceX Starship HLS",
+    "destination": "Lunar South Pole"
   },
   {
     "id": "artemis-5",

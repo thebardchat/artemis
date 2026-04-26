@@ -29,6 +29,38 @@
 
 ## Build Log
 
+### 2026-04-26 — Artemis II complete, gallery, template setup
+
+**Timeline corrections:**
+- Artemis II status: upcoming → complete (launched April 1, returned April 10 2026)
+- Artemis II distance record added: 406,771 km / 252,756 mi
+- Artemis III redesigned: no longer a lunar landing — Earth-orbit HLS docking test, target mid-2027
+- Artemis IV redesignated as first crewed lunar landing
+- Countdown switched from Artemis II to Artemis III (target 2027-07-01)
+- Telemetry ticker updated: Artemis II complete items, distance record, Artemis III next-up
+
+**Images added (all NASA public domain, images-assets.nasa.gov):**
+- `img/mission/artemis2-earthrise.jpg` — NASA ID: art002e016299 "Earthrise Captured by Orion" (113KB)
+- `img/mission/artemis2-vavilov.jpg` — NASA ID: art002e012673 "A Terrain of Ancient Impacts" (175KB)
+- `img/mission/artemis2-splashdown.jpg` — NASA ID: NHQ202604100237 "Artemis II Recovery" (131KB)
+
+**New gallery section (08 / Artemis II — The Flight):**
+- Three figure cards with NASA images, captions, dates
+- CSS: `.mission-gallery` 3-col grid, `.gallery-card`, `.crew-distinction` added to components.css
+- img-missing fallback class for graceful degradation
+
+**Crew section:**
+- Historic distinctions added under each crew member (amber color)
+- Bios updated to past tense
+
+**Template setup:**
+- README.md: use-this-template badge, template usage section, Manna + BGKPJR ecosystem table
+- TEMPLATE.md: full customization guide for forking this as a new project
+- Ecosystem footer: Manna link added
+- Note: Enable "Template repository" in GitHub → Settings → checkmark (requires web UI)
+
+---
+
 ### 2026-04-24 — Initial build
 
 **Approach decisions:**
